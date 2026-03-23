@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daniel Gonzalez | Framing and Remodeling Atlanta</title>
-    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&amp;family=Inter:wght@300;400;700;900&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- ── NAVBAR ── -->
     <header class="navbar">
         <div class="container nav-flex">
             <div class="brand">
@@ -17,15 +18,33 @@
             <nav class="desktop-nav">
                 <ul>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#work">Our Work</a></li>
                     <li><a href="#coverage">Coverage</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="tel:4046610598" class="nav-phone">404.661.0598</a></li>
                 </ul>
             </nav>
+            <button class="hamburger" id="hamburger" aria-label="Open menu">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </header>
 
+    <!-- Mobile Nav -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-close" id="mobileClose" aria-label="Close menu">✕</button>
+        <ul>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">Our Work</a></li>
+            <li><a href="#coverage" onclick="closeMenu()">Coverage</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+            <li><a href="tel:4046610598" class="mobile-phone">404.661.0598</a></li>
+        </ul>
+    </div>
+
     <main>
+
+        <!-- ── HERO ── -->
         <section class="hero" id="home">
             <div class="container">
                 <div class="hero-inner">
@@ -40,6 +59,7 @@
             </div>
         </section>
 
+        <!-- ── SERVICES ── -->
         <section id="services" class="section bg-grid-pattern">
             <div class="container">
                 <h2 class="section-title">CORE <span class="text-gold">SERVICES</span></h2>
@@ -72,50 +92,153 @@
             </div>
         </section>
 
-        <section id="coverage" class="section bg-dark-map">
+        <!-- ── OUR WORK / PHOTO GALLERY ── -->
+        <section id="work" class="section work-section">
             <div class="container">
-                <div class="text-center">
-                    <span class="tagline">Regional Authority</span>
-                    <h2 class="section-title">Proudly Serving <span class="text-gold">All of Georgia</span></h2>
-                    <p class="service-desc">Based in Atlanta and providing expert structural solutions across every county in the state.</p>
+                <div class="work-header">
+                    <span class="tagline">Portfolio</span>
+                    <h2 class="section-title">OUR <span class="text-gold">WORK</span></h2>
+                    <p class="section-desc">Every project is built with precision, care, and craftsmanship that stands the test of time.</p>
                 </div>
-
-                <div class="map-container">
-                    <div class="map-circle-wrapper">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d424141.532890696!2d-84.3879824!3d33.7489954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1711219200000!5m2!1sen!2sus" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                        </iframe>
-                        <div class="map-ring"></div>
+                <div class="work-grid">
+                    <div class="work-item work-large" data-label="Structural Framing">
+                        <img src="images/work1.jpg" alt="Structural framing project"
+                            onerror="this.parentElement.classList.add('no-img')">
+                        <div class="work-overlay"><span>Structural Framing</span></div>
+                        <div class="work-placeholder"><div class="ph-icon">📷</div><p>Add work1.jpg</p></div>
+                    </div>
+                    <div class="work-item" data-label="Kitchen Remodel">
+                        <img src="images/work2.jpg" alt="Kitchen remodel project"
+                            onerror="this.parentElement.classList.add('no-img')">
+                        <div class="work-overlay"><span>Kitchen Remodel</span></div>
+                        <div class="work-placeholder"><div class="ph-icon">📷</div><p>Add work2.jpg</p></div>
+                    </div>
+                    <div class="work-item" data-label="Custom Deck">
+                        <img src="images/work3.jpg" alt="Custom deck project"
+                            onerror="this.parentElement.classList.add('no-img')">
+                        <div class="work-overlay"><span>Custom Deck</span></div>
+                        <div class="work-placeholder"><div class="ph-icon">📷</div><p>Add work3.jpg</p></div>
+                    </div>
+                    <div class="work-item" data-label="Bathroom Remodel">
+                        <img src="images/work4.jpg" alt="Bathroom remodel"
+                            onerror="this.parentElement.classList.add('no-img')">
+                        <div class="work-overlay"><span>Bathroom Remodel</span></div>
+                        <div class="work-placeholder"><div class="ph-icon">📷</div><p>Add work4.jpg</p></div>
+                    </div>
+                    <div class="work-item" data-label="Home Addition">
+                        <img src="images/work5.jpg" alt="Home addition"
+                            onerror="this.parentElement.classList.add('no-img')">
+                        <div class="work-overlay"><span>Home Addition</span></div>
+                        <div class="work-placeholder"><div class="ph-icon">📷</div><p>Add work5.jpg</p></div>
+                    </div>
+                    <div class="work-item" data-label="Structural Repair">
+                        <img src="images/work6.jpg" alt="Structural repair"
+                            onerror="this.parentElement.classList.add('no-img')">
+                        <div class="work-overlay"><span>Structural Repair</span></div>
+                        <div class="work-placeholder"><div class="ph-icon">📷</div><p>Add work6.jpg</p></div>
                     </div>
                 </div>
+                <div class="work-cta">
+                    <p class="work-note">Have a project in mind?</p>
+                    <a href="#contact" class="btn-primary">Let's Talk →</a>
+                </div>
+            </div>
+        </section>
 
-                <div class="county-grid-wrapper">
-                    <h3>Counties Served</h3>
-                    <div class="county-list">
-                        <span>Appling</span><span>Atkinson</span><span>Bacon</span><span>Baker</span><span>Baldwin</span><span>Banks</span><span>Barrow</span><span>Bartow</span><span>Ben Hill</span><span>Berrien</span><span>Bibb</span><span>Bleckley</span><span>Brantley</span><span>Brooks</span><span>Bryan</span><span>Bulloch</span><span>Burke</span><span>Butts</span><span>Calhoun</span><span>Camden</span><span>Candler</span><span>Carroll</span><span>Catoosa</span><span>Charlton</span><span>Chatham</span><span>Chattahoochee</span><span>Chattooga</span><span>Cherokee</span><span>Clarke</span><span>Clay</span><span>Clayton</span><span>Clinch</span><span>Cobb</span><span>Coffee</span><span>Colquitt</span><span>Columbia</span><span>Cook</span><span>Coweta</span><span>Crawford</span><span>Crisp</span><span>Dade</span><span>Dawson</span><span>Decatur</span><span>DeKalb</span><span>Dodge</span><span>Dooly</span><span>Dougherty</span><span>Douglas</span><span>Early</span><span>Echols</span><span>Effingham</span><span>Elbert</span><span>Emanuel</span><span>Evans</span><span>Fannin</span><span>Fayette</span><span>Floyd</span><span>Forsyth</span><span>Franklin</span><span>Fulton</span><span>Gilmer</span><span>Glascock</span><span>Glynn</span><span>Gordon</span><span>Grady</span><span>Greene</span><span>Gwinnett</span><span>Habersham</span><span>Hall</span><span>Hancock</span><span>Haralson</span><span>Harris</span><span>Hart</span><span>Heard</span><span>Henry</span><span>Houston</span><span>Irwin</span><span>Jackson</span><span>Jasper</span><span>Jeff Davis</span><span>Jefferson</span><span>Jenkins</span><span>Johnson</span><span>Jones</span><span>Lamar</span><span>Lanier</span><span>Laurens</span><span>Lee</span><span>Liberty</span><span>Lincoln</span><span>Long</span><span>Lowndes</span><span>Lumpkin</span><span>Macon</span><span>Madison</span><span>Marion</span><span>McDuffie</span><span>McIntosh</span><span>Meriwether</span><span>Miller</span><span>Mitchell</span><span>Monroe</span><span>Montgomery</span><span>Morgan</span><span>Murray</span><span>Muscogee</span><span>Newton</span><span>Oconee</span><span>Oglethorpe</span><span>Paulding</span><span>Peach</span><span>Pickens</span><span>Pierce</span><span>Pike</span><span>Polk</span><span>Pulaski</span><span>Putnam</span><span>Quitman</span><span>Rabun</span><span>Randolph</span><span>Richmond</span><span>Rockdale</span><span>Schley</span><span>Screven</span><span>Seminole</span><span>Spalding</span><span>Stephens</span><span>Stewart</span><span>Sumter</span><span>Talbot</span><span>Taliaferro</span><span>Tattnall</span><span>Taylor</span><span>Telfair</span><span>Terrell</span><span>Thomas</span><span>Tift</span><span>Toombs</span><span>Towns</span><span>Treutlen</span><span>Troup</span><span>Turner</span><span>Twiggs</span><span>Union</span><span>Upson</span><span>Walker</span><span>Walton</span><span>Ware</span><span>Warren</span><span>Washington</span><span>Wayne</span><span>Webster</span><span>Wheeler</span><span>White</span><span>Whitfield</span><span>Wilcox</span><span>Wilkes</span><span>Wilkinson</span><span>Worth</span>
+        <!-- ── COVERAGE — MAP LEFT + COUNTIES RIGHT ── -->
+        <section id="coverage" class="section coverage-section">
+            <div class="container">
+                <div class="coverage-header text-center">
+                    <span class="tagline">Regional Authority</span>
+                    <h2 class="section-title">Proudly Serving <span class="text-gold">All of Georgia</span></h2>
+                    <p class="section-desc">Based in Atlanta — delivering expert structural solutions across the entire state of Georgia.</p>
+                </div>
+                <div class="coverage-layout">
+                    <!-- LEFT: Map -->
+                    <div class="map-side">
+                        <div class="map-wrapper">
+                            <div class="map-pulse-ring ring1"></div>
+                            <div class="map-pulse-ring ring2"></div>
+                            <div class="map-pulse-ring ring3"></div>
+                            <div class="map-frame">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1477168.0!2d-83.4!3d32.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1711219200000!5m2!1sen!2sus"
+                                    width="100%" height="100%" style="border:0;"
+                                    allowfullscreen="" loading="lazy" title="Georgia service area map">
+                                </iframe>
+                            </div>
+                            <div class="map-badge">
+                                <span class="map-badge-num">159</span>
+                                <span class="map-badge-label">Counties</span>
+                            </div>
+                        </div>
+                        <p class="map-caption">🔴 Based in Atlanta &nbsp;·&nbsp; Statewide service available</p>
+                    </div>
+                    <!-- RIGHT: County List -->
+                    <div class="county-side">
+                        <div class="county-header">
+                            <h3>Counties <span class="text-gold">Served</span></h3>
+                            <p>All 159 Georgia counties — no job too far.</p>
+                        </div>
+                        <div class="county-scroll">
+                            <div class="county-list">
+                                <span>Appling</span><span>Atkinson</span><span>Bacon</span><span>Baker</span>
+                                <span>Baldwin</span><span>Banks</span><span>Barrow</span><span>Bartow</span>
+                                <span>Ben Hill</span><span>Berrien</span><span>Bibb</span><span>Bleckley</span>
+                                <span>Brantley</span><span>Brooks</span><span>Bryan</span><span>Bulloch</span>
+                                <span>Burke</span><span>Butts</span><span>Calhoun</span><span>Camden</span>
+                                <span>Candler</span><span>Carroll</span><span>Catoosa</span><span>Charlton</span>
+                                <span>Chatham</span><span>Chattahoochee</span><span>Chattooga</span><span>Cherokee</span>
+                                <span>Clarke</span><span>Clay</span><span>Clayton</span><span>Clinch</span>
+                                <span>Cobb</span><span>Coffee</span><span>Colquitt</span><span>Columbia</span>
+                                <span>Cook</span><span>Coweta</span><span>Crawford</span><span>Crisp</span>
+                                <span>Dade</span><span>Dawson</span><span>Decatur</span><span>DeKalb</span>
+                                <span>Dodge</span><span>Dooly</span><span>Dougherty</span><span>Douglas</span>
+                                <span>Early</span><span>Echols</span><span>Effingham</span><span>Elbert</span>
+                                <span>Emanuel</span><span>Evans</span><span>Fannin</span><span>Fayette</span>
+                                <span>Floyd</span><span>Forsyth</span><span>Franklin</span><span>Fulton</span>
+                                <span>Gilmer</span><span>Glascock</span><span>Glynn</span><span>Gordon</span>
+                                <span>Grady</span><span>Greene</span><span>Gwinnett</span><span>Habersham</span>
+                                <span>Hall</span><span>Hancock</span><span>Haralson</span><span>Harris</span>
+                                <span>Hart</span><span>Heard</span><span>Henry</span><span>Houston</span>
+                                <span>Irwin</span><span>Jackson</span><span>Jasper</span><span>Jeff Davis</span>
+                                <span>Jefferson</span><span>Jenkins</span><span>Johnson</span><span>Jones</span>
+                                <span>Lamar</span><span>Lanier</span><span>Laurens</span><span>Lee</span>
+                                <span>Liberty</span><span>Lincoln</span><span>Long</span><span>Lowndes</span>
+                                <span>Lumpkin</span><span>Macon</span><span>Madison</span><span>Marion</span>
+                                <span>McDuffie</span><span>McIntosh</span><span>Meriwether</span><span>Miller</span>
+                                <span>Mitchell</span><span>Monroe</span><span>Montgomery</span><span>Morgan</span>
+                                <span>Murray</span><span>Muscogee</span><span>Newton</span><span>Oconee</span>
+                                <span>Oglethorpe</span><span>Paulding</span><span>Peach</span><span>Pickens</span>
+                                <span>Pierce</span><span>Pike</span><span>Polk</span><span>Pulaski</span>
+                                <span>Putnam</span><span>Quitman</span><span>Rabun</span><span>Randolph</span>
+                                <span>Richmond</span><span>Rockdale</span><span>Schley</span><span>Screven</span>
+                                <span>Seminole</span><span>Spalding</span><span>Stephens</span><span>Stewart</span>
+                                <span>Sumter</span><span>Talbot</span><span>Taliaferro</span><span>Tattnall</span>
+                                <span>Taylor</span><span>Telfair</span><span>Terrell</span><span>Thomas</span>
+                                <span>Tift</span><span>Toombs</span><span>Towns</span><span>Treutlen</span>
+                                <span>Troup</span><span>Turner</span><span>Twiggs</span><span>Union</span>
+                                <span>Upson</span><span>Walker</span><span>Walton</span><span>Ware</span>
+                                <span>Warren</span><span>Washington</span><span>Wayne</span><span>Webster</span>
+                                <span>Wheeler</span><span>White</span><span>Whitfield</span><span>Wilcox</span>
+                                <span>Wilkes</span><span>Wilkinson</span><span>Worth</span>
+                            </div>
+                        </div>
+                        <a href="#contact" class="btn-primary county-cta">Check Your Area →</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- ── CONTACT ── -->
         <section id="contact" class="contact-section">
             <div class="container split-grid">
                 <div class="contact-text">
                     <h2>Daniel <span class="text-gold">Gonzalez</span></h2>
-                    <p>Professional Framing and Remodeling. <br>Text or Email for a direct quote.</p>
-                    <div class="c-card">
-                        <p class="label">EMAIL</p>
-                        <p class="info">d.gonzalezatlanta@gmail.com</p>
-                    </div>
-                    <div class="c-card">
-                        <p class="label">PHONE / TEXT</p>
-                        <p class="info">404.661.0598</p>
-                    </div>
+                    <p>Professional Framing and Remodeling.<br>Text or Email for a direct quote.</p>
+                    <div class="c-card"><p class="label">EMAIL</p><p class="info">d.gonzalezatlanta@gmail.com</p></div>
+                    <div class="c-card"><p class="label">PHONE / TEXT</p><p class="info">404.661.0598</p></div>
+                    <div class="c-card"><p class="label">LOCATION</p><p class="info">Atlanta, Georgia</p></div>
                 </div>
                 <div class="form-wrapper">
                     <form action="https://wa.me/14046610598" method="get" target="_blank">
@@ -127,8 +250,9 @@
                             <label for="serviceType">Service Requested</label>
                             <select id="serviceType" name="service" required>
                                 <option value="" disabled selected>Select a Service</option>
-                                <option value="Framing">Framing</option>
-                                <option value="Remodeling">Remodeling</option>
+                                <option value="Framing">Structural Framing</option>
+                                <option value="Remodeling">High-End Remodeling</option>
+                                <option value="Deck">Custom Deck</option>
                                 <option value="Repair">Structural Repair</option>
                             </select>
                         </div>
@@ -141,14 +265,41 @@
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
         <div class="container footer-flex">
-            <p>&copy; 2026 Daniel Gonzalez Atlanta | Licensed and Insured</p>
-            <span>Framing, Remodeling, &amp; More</span>
+            <p>&copy; 2026 Daniel Gonzalez Atlanta &nbsp;|&nbsp; Licensed and Insured</p>
+            <span>Framing, Remodeling &amp; More</span>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+        hamburger.addEventListener('click', () => {
+            mobileMenu.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        });
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        mobileClose.addEventListener('click', closeMenu);
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu(); });
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.bento-item, .work-item, .county-side, .map-side').forEach(el => {
+            el.classList.add('fade-in');
+            observer.observe(el);
+        });
+    </script>
 
 </body>
 </html>
