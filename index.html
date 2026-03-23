@@ -42,30 +42,30 @@
         <section id="services" class="section">
             <div class="container">
                 <div class="bento-grid">
-                    <div class="bento-item tall">
+                    <article class="bento-item tall">
                         <div class="bento-content">
                             <h3>Structural Framing</h3>
                             <p>Laser-accurate structural skeletons for new additions and custom homes.</p>
                         </div>
-                    </div>
-                    <div class="bento-item wide">
+                    </article>
+                    <article class="bento-item wide">
                         <div class="bento-content">
                             <h3>High-End Remodeling</h3>
                             <p>Full-gut transformations for kitchens, bathrooms, and living spaces.</p>
                         </div>
-                    </div>
-                    <div class="bento-item">
+                    </article>
+                    <article class="bento-item">
                         <div class="bento-content">
                             <h3>Custom Decks</h3>
                             <p>Expanding your living space with premium outdoor structural builds.</p>
                         </div>
-                    </div>
-                    <div class="bento-item">
+                    </article>
+                    <article class="bento-item">
                         <div class="bento-content">
                             <h3>Repairs</h3>
                             <p>Specialty structural fixes and home improvement that lasts a lifetime.</p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -85,14 +85,23 @@
                     </div>
                 </div>
                 <div class="form-wrapper">
-                    <form action="https://wa.me/14046610598" method="GET">
+                    <form action="https://wa.me/14046610598" method="GET" target="_blank">
                         <div class="form-group">
-                            <label for="userName">Name</label>
-                            <input type="text" id="userName" name="text" placeholder="Your Name" required>
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="text" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="userMsg">Project Details</label>
-                            <textarea id="userMsg" placeholder="Tell me about your project..." rows="4"></textarea>
+                            <label for="serviceType">Service Requested</label>
+                            <select id="serviceType" name="service" required>
+                                <option value="" disabled selected>Select a Service</option>
+                                <option value="Framing">Framing</option>
+                                <option value="Remodeling">Remodeling</option>
+                                <option value="Repair">Structural Repair</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="projectNotes">Project Details</label>
+                            <textarea id="projectNotes" placeholder="Tell me about your project..." rows="4"></textarea>
                         </div>
                         <button type="submit" class="submit-btn">GET ESTIMATE</button>
                     </form>
