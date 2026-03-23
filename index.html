@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Gonzalez | Framing & Remodeling Atlanta</title>
+    <title>Daniel Gonzalez | Framing & Remodeling</title>
     <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -12,13 +12,14 @@
     <header class="navbar">
         <div class="container nav-flex">
             <div class="brand">
-                <span class="brand-main">D.GONZALEZ</span>
-                <span class="brand-sub">FRAMING & REMODELING</span>
+                <p class="brand-main">D.GONZALEZ</p>
+                <p class="brand-sub">FRAMING & REMODELING</p>
             </div>
             <nav class="desktop-nav">
-                <a href="#services">Services</a>
-                <a href="#process">Process</a>
-                <a href="#contact" class="nav-btn">Estimate</a>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -27,9 +28,9 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-inner">
-                    <span class="tagline">Structure & Aesthetics</span>
-                    <h1>Built for <br><span class="outline-text">Stability.</span></h1>
-                    <p>Atlanta's specialist in structural framing and high-end residential remodeling. We build the core that supports your vision.</p>
+                    <p class="tagline">Structure & Aesthetics</p>
+                    <h1>Built for <br><span class="outline-text">Stability</span></h1>
+                    <p class="hero-desc">Atlanta's specialist in structural framing and high-end residential remodeling. We build the core that supports your vision.</p>
                     <div class="hero-cta">
                         <a href="#contact" class="btn-primary">Start Your Project</a>
                         <a href="tel:4046610598" class="btn-secondary">404.661.0598</a>
@@ -69,54 +70,30 @@
             </div>
         </section>
 
-        <section id="process" class="section bg-light-dark">
-            <div class="container">
-                <h2 class="section-title">THE <span class="text-gold">PROCESS</span></h2>
-                <div class="process-grid">
-                    <div class="step">
-                        <span class="step-num">01</span>
-                        <h4>Consultation</h4>
-                        <p>We discuss your blueprints or remodeling vision over the phone or on-site.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">02</span>
-                        <h4>Preparation</h4>
-                        <p>Detailed material lists and structural planning to ensure a zero-error build.</p>
-                    </div>
-                    <div class="step">
-                        <span class="step-num">03</span>
-                        <h4>Execution</h4>
-                        <p>Clean, efficient, and professional job site management from start to finish.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="contact" class="contact-section">
             <div class="container split-grid">
                 <div class="contact-text">
                     <h2>Daniel <span class="text-gold">Gonzalez</span></h2>
-                    <p>Framing, Remodeling, and More. <br>Text or Email for a free estimate.</p>
-                    <div class="contact-cards">
-                        <div class="c-card">
-                            <span>DIRECT EMAIL</span>
-                            <a href="mailto:d.gonzalezatlanta@gmail.com">d.gonzalezatlanta@gmail.com</a>
-                        </div>
-                        <div class="c-card">
-                            <span>TEXT/CALL</span>
-                            <a href="tel:4046610598">404.661.0598</a>
-                        </div>
+                    <p>Professional Framing & Remodeling. <br>Based in Atlanta, GA.</p>
+                    <div class="c-card">
+                        <p class="label">EMAIL</p>
+                        <p class="info">d.gonzalezatlanta@gmail.com</p>
+                    </div>
+                    <div class="c-card">
+                        <p class="label">PHONE</p>
+                        <p class="info">404.661.0598</p>
                     </div>
                 </div>
                 <div class="form-wrapper">
-                    <form action="https://wa.me/14046610598" method="GET" target="_blank">
-                        <input type="text" name="text" placeholder="Your Name" required>
-                        <select name="service" required>
-                            <option value="" disabled selected>Select Service</option>
-                            <option value="Framing">Framing</option>
-                            <option value="Remodeling">Remodeling</option>
-                        </select>
-                        <textarea placeholder="Tell me about your project..." rows="4"></textarea>
+                    <form action="https://wa.me/14046610598" method="GET">
+                        <div class="form-group">
+                            <label for="userName">Name</label>
+                            <input type="text" id="userName" name="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userMsg">Project Details</label>
+                            <textarea id="userMsg" placeholder="Tell me about your project..." rows="4"></textarea>
+                        </div>
                         <button type="submit" class="submit-btn">GET ESTIMATE</button>
                     </form>
                 </div>
@@ -125,9 +102,8 @@
     </main>
 
     <footer class="footer">
-        <div class="container footer-flex">
-            <p>&copy; 2026 D.GONZALEZ ATLANTA</p>
-            <span>Licensed &amp; Insured</span>
+        <div class="container">
+            <p>&copy; 2026 Daniel Gonzalez Atlanta | Licensed & Insured</p>
         </div>
     </footer>
 
